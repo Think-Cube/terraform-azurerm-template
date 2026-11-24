@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: azurerm provider issues
+    url: https://github.com/hashicorp/terraform-provider-azurerm/issues
+    about: Problems in the azurerm provider itself rather than in this module
