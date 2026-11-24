@@ -1,0 +1,54 @@
+name: Bug Report
+description: Report a problem with the module
+title: "bug: "
+labels: ["bug", "triage"]
+body:
+  - type: input
+    id: module_version
+    attributes:
+      label: Module version
+      placeholder: e.g. v1.0.0
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Describe the bug
+      description: A clear description of what the bug is.
+    validations:
+      required: true
+
+  - type: textarea
+    id: configuration
+    attributes:
+      label: Configuration
+      description: The module block you use, without secrets or real IDs.
+      render: hcl
+    validations:
+      required: true
+
+  - type: textarea
+    id: output
+    attributes:
+      label: Plan or error output
+      render: text
+    validations:
+      required: false
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      placeholder: |
+        - Terraform version: 1.17
+        - azurerm provider version: 5.15
+    validations:
+      required: true
